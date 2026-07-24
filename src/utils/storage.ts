@@ -1,5 +1,6 @@
 const STORAGE_KEY = 'enade-quimica-progress'
 const THEME_KEY = 'enade-quimica-theme'
+const DATES_NOTICE_KEY = 'enade-quimica-aviso-datas-v1'
 
 export function loadFromStorage<T>(key: string, fallback: T): T {
   try {
@@ -19,4 +20,4 @@ export function saveToStorage<T>(key: string, value: T): void {
   }
 }
 
-export { STORAGE_KEY, THEME_KEY }
+export { STORAGE_KEY, THEME_KEY, DATES_NOTICE_KEY }

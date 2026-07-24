@@ -13,6 +13,7 @@ import {
 import { Card } from '../components/ui/Card'
 import { Button } from '../components/ui/Button'
 import { ProgressBar } from '../components/ui/ProgressBar'
+import { DatesNotice } from '../components/DatesNotice'
 import { useProgress } from '../context/ProgressContext'
 import { modules, getTotalQuestions } from '../data/modules'
 
@@ -83,7 +84,7 @@ export default function Dashboard() {
             <Link to="/simulado">
               <Button size="lg">
                 <ClipboardList size={18} />
-                Iniciar Simulado
+                Iniciar Estudos
               </Button>
             </Link>
             <Link to="/modulos">
@@ -94,6 +95,11 @@ export default function Dashboard() {
             </Link>
           </div>
         </div>
+      </motion.section>
+
+      {/* Datas importantes */}
+      <motion.section variants={item}>
+        <DatesNotice />
       </motion.section>
 
       {/* Stats */}
