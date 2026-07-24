@@ -61,17 +61,17 @@ export default function Sobre() {
                 Prof. Dr. Rafael Vieira
               </h2>
               <p className="text-[var(--color-text-secondary)] mt-1">
-                Professor de Química · Cientista de Dados
+                Professor de Química · Química Orgânica · Química Computacional
               </p>
 
               <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-4">
                 <Badge color="#0071e3" variant="outline">Docente IFRO</Badge>
                 <Badge color="#34c759" variant="outline">Química</Badge>
-                <Badge color="#af52de" variant="outline">Ciência de Dados</Badge>
+                <Badge color="#af52de" variant="outline">Química Computacional</Badge>
               </div>
 
               <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed mt-5">
-                Responsável pela criação e curadoria de conteúdo desta plataforma de revisão
+                Presidente da Comissão Enade da Lic. em Química, Campus de Ji-Paraná, responsável pela criação e curadoria de conteúdo desta plataforma de revisão
                 para o ENADE, desenvolvida para apoiar estudantes da Licenciatura em Química
                 do IFRO — Campus Ji-Paraná na preparação para o exame, reunindo questões
                 comentadas, flashcards, simulados e vídeos selecionados por tema.

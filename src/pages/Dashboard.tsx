@@ -76,8 +76,8 @@ export default function Dashboard() {
           </h1>
 
           <p className="text-lg sm:text-xl text-[var(--color-text-secondary)] max-w-xl mx-auto leading-relaxed">
-            Montamos questões comentadas, flashcards, simulados e vídeos selecionados para
-            prepará-los para o exame — tudo em um só lugar.
+            Montamos questões comentadas, flashcards, simulados e vídeos selecionados para rever conteúdos do curso e
+            prepará-los para o exame.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
