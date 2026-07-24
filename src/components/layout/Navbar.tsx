@@ -7,15 +7,22 @@ import {
   Layers,
   BarChart3,
   FlaskConical,
+  Video,
+  User,
 } from 'lucide-react'
 import { ThemeToggle } from '../ui/ThemeToggle'
+
+const IFRO_LOGO_URL =
+  'https://commons.wikimedia.org/wiki/Special:FilePath/Instituto_Federal_de_Rond%C3%B4nia_-_Marca_Vertical_2015.svg'
 
 const navItems = [
   { to: '/', icon: LayoutDashboard, label: 'Início' },
   { to: '/modulos', icon: BookOpen, label: 'Módulos' },
   { to: '/simulado', icon: ClipboardList, label: 'Simulado' },
   { to: '/flashcards', icon: Layers, label: 'Flashcards' },
+  { to: '/videos', icon: Video, label: 'Vídeos' },
   { to: '/progresso', icon: BarChart3, label: 'Progresso' },
+  { to: '/sobre', icon: User, label: 'Sobre' },
 ]
 
 export function Navbar() {
@@ -31,13 +38,23 @@ export function Navbar() {
           <span className="font-semibold text-[var(--color-text-primary)] text-sm tracking-tight hidden sm:block">
             ENADE Química
           </span>
+          <span className="hidden lg:block w-px h-5 bg-[var(--color-border)] mx-1" />
+          <img
+            src={IFRO_LOGO_URL}
+            alt="IFRO"
+            className="hidden lg:block h-6 w-auto opacity-80 dark:invert dark:brightness-90"
+            loading="lazy"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none'
+            }}
+          />
         </NavLink>
 
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-0.5">
           {navItems.map(({ to, icon: Icon, label }) => {
             const active = location.pathname === to || (to !== '/' && location.pathname.startsWith(to))
             return (
-              <NavLink key={to} to={to} className="relative px-3 py-1.5 rounded-lg text-sm font-medium transition-colors">
+              <NavLink key={to} to={to} className="relative px-2.5 py-1.5 rounded-lg text-sm font-medium transition-colors">
                 {active && (
                   <motion.div
                     layoutId="nav-indicator"
@@ -47,7 +64,7 @@ export function Navbar() {
                 )}
                 <span className={`relative flex items-center gap-1.5 ${active ? 'text-[var(--color-text-primary)]' : 'text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]'}`}>
                   <Icon size={15} />
-                  {label}
+                  <span className="hidden xl:inline">{label}</span>
                 </span>
               </NavLink>
             )

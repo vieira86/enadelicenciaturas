@@ -119,14 +119,24 @@ export default function Quiz() {
               <Badge color={difficultyColor[q.difficulty]} variant="outline">
                 {difficultyLabel[q.difficulty]}
               </Badge>
-              {q.year && (
-                <span className="text-xs text-[var(--color-text-secondary)]">ENADE {q.year}</span>
+              {q.source && (
+                <span className="text-xs text-[var(--color-text-secondary)]">{q.source}</span>
               )}
             </div>
 
-            <p className="text-lg font-medium text-[var(--color-text-primary)] leading-relaxed mb-6">
+            <p className="text-lg font-medium text-[var(--color-text-primary)] leading-relaxed mb-4 whitespace-pre-line">
               {q.text}
             </p>
+
+            {q.imageUrl && (
+              <div className="mb-6 rounded-xl overflow-hidden border border-[var(--color-border)] bg-white">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/questoes/${q.imageUrl}`}
+                  alt="Ilustração da questão"
+                  className="w-full h-auto"
+                />
+              </div>
+            )}
 
             <div className="space-y-2.5">
               {q.options.map((option, i) => {

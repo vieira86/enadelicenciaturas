@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Provas originais (contêm gabarito) - não publicar no repositório público
+prova1.PDF
+prova2.PDF
+prova_extracted.txt
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

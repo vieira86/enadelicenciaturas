@@ -8,6 +8,7 @@ import {
   TrendingUp,
   BookOpen,
   ClipboardList,
+  GraduationCap,
 } from 'lucide-react'
 import { Card } from '../components/ui/Card'
 import { Button } from '../components/ui/Button'
@@ -51,26 +52,47 @@ export default function Dashboard() {
   return (
     <motion.div variants={container} initial="hidden" animate="show" className="space-y-10">
       {/* Hero */}
-      <motion.section variants={item} className="text-center space-y-4 pt-4 pb-2">
-        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-[var(--color-text-primary)]">
-          ENADE Licenciatura em Química
-        </h1>
-        <p className="text-lg text-[var(--color-text-secondary)] max-w-xl mx-auto leading-relaxed">
-          Sua plataforma de revisão para o Exame Nacional de Desempenho dos Estudantes — Licenciatura em Química (IFRO Ji-Paraná).
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-          <Link to="/simulado">
-            <Button size="lg">
-              <ClipboardList size={18} />
-              Iniciar Simulado
-            </Button>
-          </Link>
-          <Link to="/modulos">
-            <Button variant="secondary" size="lg">
-              <BookOpen size={18} />
-              Ver Módulos
-            </Button>
-          </Link>
+      <motion.section variants={item} className="relative overflow-hidden rounded-[2rem] -mx-4 sm:mx-0">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute top-[-20%] left-[-10%] w-[26rem] h-[26rem] rounded-full bg-[#0071e3]/25 blur-[90px]" />
+          <div className="absolute bottom-[-25%] right-[-10%] w-[26rem] h-[26rem] rounded-full bg-[#34c759]/20 blur-[90px]" />
+          <div className="absolute top-[10%] right-[15%] w-64 h-64 rounded-full bg-[#af52de]/15 blur-[80px]" />
+          <div className="absolute inset-0 bg-[var(--color-surface)]/60 dark:bg-black/30" />
+        </div>
+
+        <div className="text-center space-y-5 px-6 py-16 sm:py-24">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full glass text-xs font-medium text-[var(--color-text-secondary)]">
+            <GraduationCap size={13} className="text-[#0071e3]" />
+            IFRO · Campus Ji-Paraná · Licenciatura em Química
+          </div>
+
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[var(--color-text-primary)] leading-[1.05]">
+            Revisão ENADE.
+            <br />
+            <span className="bg-gradient-to-r from-[#0071e3] via-[#5856d6] to-[#34c759] bg-clip-text text-transparent">
+              Simples assim.
+            </span>
+          </h1>
+
+          <p className="text-lg sm:text-xl text-[var(--color-text-secondary)] max-w-xl mx-auto leading-relaxed">
+            Montamos questões comentadas, flashcards, simulados e vídeos selecionados para
+            prepará-los para o exame — tudo em um só lugar.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
+            <Link to="/simulado">
+              <Button size="lg">
+                <ClipboardList size={18} />
+                Iniciar Simulado
+              </Button>
+            </Link>
+            <Link to="/modulos">
+              <Button variant="secondary" size="lg">
+                <BookOpen size={18} />
+                Ver Módulos
+              </Button>
+            </Link>
+          </div>
         </div>
       </motion.section>
 

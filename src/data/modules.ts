@@ -8,7 +8,7 @@ export const modules: Module[] = [
     icon: 'Atom',
     color: '#0071e3',
     topics: ['Estrutura atômica', 'Ligações químicas', 'Estequiometria', 'Tabela periódica', 'Reações químicas'],
-    questionIds: ['qg-1', 'qg-2', 'qg-3', 'qg-4', 'qg-5'],
+    questionIds: ["euq1-01", "euq1-03", "euq1-08", "euq1-14", "euq1-19", "euq1-35", "euq2-01", "euq2-03", "euq2-16", "euq2-20", "euq2-33", "euq2-44"],
   },
   {
     id: 'quimica-organica',
@@ -16,8 +16,8 @@ export const modules: Module[] = [
     description: 'Hidrocarbonetos, funções orgânicas, isomeria e reações orgânicas.',
     icon: 'FlaskConical',
     color: '#34c759',
-    topics: ['Hidrocarbonetos', 'Funções orgânicas', 'Isomeria', 'Reações orgânicas', 'Polímeros'],
-    questionIds: ['qo-1', 'qo-2', 'qo-3', 'qo-4', 'qo-5'],
+    topics: ['Hidrocarbonetos', 'Funções orgânicas', 'Isomeria', 'Reações orgânicas', 'Bioquímica'],
+    questionIds: ["euq1-09", "euq1-10", "euq1-11", "euq1-12", "euq1-18", "euq1-25", "euq1-26", "euq1-27", "euq1-31", "euq1-32", "euq1-39", "euq1-41", "euq1-45", "euq2-09", "euq2-11", "euq2-12", "euq2-17", "euq2-18", "euq2-25", "euq2-26", "euq2-27", "euq2-31", "euq2-32", "euq2-39", "euq2-41", "euq2-45"],
   },
   {
     id: 'quimica-inorganica',
@@ -26,7 +26,7 @@ export const modules: Module[] = [
     icon: 'Beaker',
     color: '#ff9500',
     topics: ['Ácidos e bases', 'Sais', 'Equilíbrio químico', 'Eletroquímica', 'Compostos de coordenação'],
-    questionIds: ['qi-1', 'qi-2', 'qi-3', 'qi-4', 'qi-5'],
+    questionIds: ["euq1-02", "euq1-04", "euq1-05", "euq1-07", "euq1-20", "euq1-21", "euq1-33", "euq1-34", "euq2-02", "euq2-04", "euq2-19", "euq2-21", "euq2-23", "euq2-34"],
   },
   {
     id: 'fisico-quimica',
@@ -35,7 +35,7 @@ export const modules: Module[] = [
     icon: 'Zap',
     color: '#af52de',
     topics: ['Termodinâmica', 'Cinética química', 'Eletroquímica', 'Propriedades coligativas', 'Química nuclear'],
-    questionIds: ['fq-1', 'fq-2', 'fq-3', 'fq-4', 'fq-5'],
+    questionIds: ["euq1-13", "euq1-15", "euq1-16", "euq1-28", "euq1-29", "euq1-30", "euq1-43", "euq1-44", "euq2-14", "euq2-15", "euq2-24", "euq2-28", "euq2-29", "euq2-30", "euq2-35", "euq2-37", "euq2-42", "euq2-43"],
   },
   {
     id: 'quimica-analitica',
@@ -44,7 +44,7 @@ export const modules: Module[] = [
     icon: 'Microscope',
     color: '#ff2d55',
     topics: ['Análise qualitativa', 'Titulações', 'Espectroscopia', 'Cromatografia', 'Gravimetria'],
-    questionIds: ['qa-1', 'qa-2', 'qa-3', 'qa-4', 'qa-5'],
+    questionIds: ["euq1-06", "euq1-17", "euq1-22", "euq1-23", "euq1-24", "euq1-36", "euq1-37", "euq1-38", "euq1-40", "euq2-05", "euq2-06", "euq2-07", "euq2-08", "euq2-13", "euq2-22", "euq2-36", "euq2-38"],
   },
   {
     id: 'didatica-quimica',

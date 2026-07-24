@@ -9,6 +9,8 @@ import Quiz from './pages/Quiz'
 import Simulado from './pages/Simulado'
 import FlashcardsPage from './pages/Flashcards'
 import ProgressPage from './pages/Progress'
+import Videos from './pages/Videos'
+import Sobre from './pages/Sobre'
 
 export default function App() {
   return (
@@ -23,7 +25,9 @@ export default function App() {
               <Route path="quiz/:moduleId" element={<Quiz />} />
               <Route path="simulado" element={<Simulado />} />
               <Route path="flashcards" element={<FlashcardsPage />} />
+              <Route path="videos" element={<Videos />} />
               <Route path="progresso" element={<ProgressPage />} />
+              <Route path="sobre" element={<Sobre />} />
             </Route>
           </Routes>
         </HashRouter>

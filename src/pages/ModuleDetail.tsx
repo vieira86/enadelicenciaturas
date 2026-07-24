@@ -1,6 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, CheckCircle2, Circle, Play } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, Circle, Play, Video } from 'lucide-react'
 import { Card } from '../components/ui/Card'
 import { Button } from '../components/ui/Button'
 import { Badge } from '../components/ui/Badge'
@@ -8,6 +8,7 @@ import { ProgressBar } from '../components/ui/ProgressBar'
 import { useProgress } from '../context/ProgressContext'
 import { getModuleById } from '../data/modules'
 import { getQuestionsByModule, getFlashcardsByModule } from '../data/questions'
+import { getVideosByModule } from '../data/videos'
 
 export default function ModuleDetail() {
   const { moduleId } = useParams<{ moduleId: string }>()
@@ -18,6 +19,7 @@ export default function ModuleDetail() {
 
   const questions = getQuestionsByModule(mod.id)
   const flashcards = getFlashcardsByModule(mod.id)
+  const moduleVideos = getVideosByModule(mod.id)
   const prog = getModuleProgress(mod.id)
   const pct = questions.length > 0 ? (prog.completedQuestions.length / questions.length) * 100 : 0
 
@@ -100,6 +102,49 @@ export default function ModuleDetail() {
           })}
         </div>
       </div>
+
+      {moduleVideos.length > 0 && (
+        <div>
+          <h2 className="text-lg font-semibold text-[var(--color-text-primary)] mb-3">
+            Vídeos recomendados
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {moduleVideos.map((v) => (
+              <a
+                key={v.id}
+                href={`https://www.youtube.com/watch?v=${v.youtubeId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Card hover padding="sm" className="h-full">
+                  <div className="flex gap-3">
+                    <div className="w-28 shrink-0 rounded-lg overflow-hidden bg-black/5">
+                      <img
+                        src={`https://i.ytimg.com/vi/${v.youtubeId}/mqdefault.jpg`}
+                        alt={v.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-1.5">
+                        <Video size={13} className="text-[#ff0000] shrink-0" />
+                        <span className="text-[11px] text-[var(--color-text-secondary)] truncate">{v.topic}</span>
+                      </div>
+                      <p className="text-sm font-medium text-[var(--color-text-primary)] mt-0.5 line-clamp-2">
+                        {v.title}
+                      </p>
+                      <p className="text-xs text-[var(--color-text-secondary)] mt-1 line-clamp-2">
+                        {v.description}
+                      </p>
+                    </div>
+                  </div>
+                </Card>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
 
       {flashcards.length > 0 && (
         <div>

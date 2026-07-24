@@ -17,6 +17,20 @@ export interface Question {
   explanation: string
   difficulty: 'easy' | 'medium' | 'hard'
   year?: number
+  /** Origem da questão (ex.: "Exame Unificado de Química (EUQ) 2025/2") quando não for uma questão de demonstração. */
+  source?: string
+  /** Caminho (relativo a /public) de uma imagem de apoio, ex.: estrutura química, quando o enunciado depende de uma figura. */
+  imageUrl?: string
+}
+
+export interface VideoResource {
+  id: string
+  moduleId: string
+  topic: string
+  title: string
+  channel: string
+  youtubeId: string
+  description: string
 }
 
 export interface Flashcard {
