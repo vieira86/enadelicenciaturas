@@ -20,6 +20,10 @@ npm run dev
 ## Deploy no GitHub Pages
 
 ```bash
+npm run build
+git add .
+git commit -m "Atualização"
+git push
 npm run deploy
 ```
 

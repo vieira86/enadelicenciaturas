@@ -71,7 +71,7 @@ export default function Dashboard() {
             Revisão ENADE.
             <br />
             <span className="bg-gradient-to-r from-[#0071e3] via-[#5856d6] to-[#34c759] bg-clip-text text-transparent">
-              Simples assim.
+              Foquem nos estudos!
             </span>
           </h1>
 

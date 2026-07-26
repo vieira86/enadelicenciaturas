@@ -87,7 +87,7 @@ export default function Sobre() {
                   <GithubMark size={15} /> GitHub
                 </a>
                 <a
-                  href="https://www.vieira-rafael.com"
+                  href="https://www.rafaelvieira.org"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-medium px-4 py-2 rounded-full glass text-[var(--color-text-primary)] hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
@@ -117,7 +117,7 @@ export default function Sobre() {
           </div>
           <h3 className="font-semibold text-[var(--color-text-primary)] text-sm mb-1">Sobre o material</h3>
           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-            As questões desta plataforma têm como base o Exame Unificado de Química (EUQ),
+            As questões desta plataforma têm como base o Exame Nacional de Desempenho dos Estudantes (ENADE) e foram selecionadas, comentadas e re
             reescritas com explicações próprias para fins de estudo.
           </p>
         </Card>
@@ -125,7 +125,7 @@ export default function Sobre() {
 
       <motion.div variants={item} className="text-center">
         <a
-          href="https://www.vieira-rafael.com"
+          href="https://www.rafaelvieira.org"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
