@@ -9,6 +9,7 @@ import {
   FlaskConical,
   Video,
   User,
+  Users,
 } from 'lucide-react'
 import { ThemeToggle } from '../ui/ThemeToggle'
 
@@ -22,6 +23,7 @@ const navItems = [
   { to: '/flashcards', icon: Layers, label: 'Flashcards' },
   { to: '/videos', icon: Video, label: 'Vídeos' },
   { to: '/progresso', icon: BarChart3, label: 'Progresso' },
+  { to: '/resultados-turma', icon: Users, label: 'Turma' },
   { to: '/sobre', icon: User, label: 'Sobre' },
 ]
 
@@ -82,14 +84,14 @@ export function MobileNav() {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden glass border-t border-[var(--color-border)]">
-      <div className="flex items-center justify-around h-16 px-2">
+      <div className="flex items-center justify-around h-16 px-2 overflow-x-auto">
         {navItems.map(({ to, icon: Icon, label }) => {
           const active = location.pathname === to || (to !== '/' && location.pathname.startsWith(to))
           return (
             <NavLink
               key={to}
               to={to}
-              className={`flex flex-col items-center gap-0.5 px-3 py-1.5 rounded-xl transition-colors ${active ? 'text-[#0071e3]' : 'text-[var(--color-text-secondary)]'}`}
+              className={`flex flex-col items-center gap-0.5 px-2.5 py-1.5 rounded-xl transition-colors shrink-0 ${active ? 'text-[#0071e3]' : 'text-[var(--color-text-secondary)]'}`}
             >
               <Icon size={20} />
               <span className="text-[10px] font-medium">{label}</span>

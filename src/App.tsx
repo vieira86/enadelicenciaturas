@@ -11,6 +11,7 @@ import FlashcardsPage from './pages/Flashcards'
 import ProgressPage from './pages/Progress'
 import Videos from './pages/Videos'
 import Sobre from './pages/Sobre'
+import ResultadosTurma from './pages/ResultadosTurma'
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
               <Route path="flashcards" element={<FlashcardsPage />} />
               <Route path="videos" element={<Videos />} />
               <Route path="progresso" element={<ProgressPage />} />
+              <Route path="resultados-turma" element={<ResultadosTurma />} />
               <Route path="sobre" element={<Sobre />} />
             </Route>
           </Routes>
